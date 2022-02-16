@@ -23,3 +23,53 @@ const displayItems = (passedArray) => {
 }
 displayItems(array)
 
+function func(){
+    return "Success"
+}
+
+const is0dd = () => {
+    return "Success"
+}
+
+let data = [
+    10,
+    12,
+    34,
+    67,
+    5,
+    34,
+    99,
+    99,
+    100
+]
+
+let filteredData = [];
+for(let element of data){
+    if (element > 15){
+        filteredData.push(element)
+    }
+}
+//console.log(filteredData)
+
+const filteredArray = data.filter((element )=>{
+    if (element >= 34 && element <= 80){
+        return element;
+    }
+})
+console.log(filteredArray)
+
+const mappedData = data.map((element) => {
+    if(element === 34){
+        element = 43
+    }
+    return element
+})
+//console.log(mappedData)
+
+const found = data.find((element) =>{
+    if (element === 99){
+        return element
+    }
+})
+
+console.log(found)
