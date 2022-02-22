@@ -64,8 +64,23 @@ class Mercedes extends Car{
 
 const car = new Car();
 car.setType(CAR_TYPES.SEDAN)
-console.log(car.getType());
+//console.log(car.getType());
 const mercedes = new Mercedes();
 mercedes.setType(CAR_TYPES.COMBI);
 mercedes.setColor(MERCEDES_COLOR_TYPES.GREEN)
-console.log(mercedes.getType(),mercedes.getColor())
+//console.log(mercedes.getType(),mercedes.getColor())
+
+const wait = async () => {
+    return new  Promise((resolve,reject) => {
+        setTimeout(() => {
+            resolve(3)
+        },2000)
+    })
+}
+
+(async () =>{
+    console.log(1)
+    console.log(2)
+    console.log(await wait())
+    console.log(4)
+})()
